@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const carousel = document.querySelector(carouselSelector);
         if (!carousel) return;
 
-        const slides = carousel.querySelectorAll('.executives-slide, .staff-slide');
+        const slides = carousel.querySelectorAll('.executives-slide'); // Updated to ONLY select executive slides
         const dotsContainer = carousel.parentElement.querySelector('.carousel-dots');
         if (slides.length === 0) return;
 
@@ -37,84 +37,95 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create dots
         if (dotsContainer) {
-            dotsContainer.innerHTML = '';
-            slides.forEach((_, i) => {
-                const dot = document.createElement('button');
+            slides.forEach((_, index) => {
+                const dot = document.createElement('span');
                 dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                dot.addEventListener('click', () => {
-                    showSlide(i);
-                    resetInterval();
-                });
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => showSlide(index));
                 dotsContainer.appendChild(dot);
             });
         }
         const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
 
-        function showSlide(n) {
-            slides.forEach((slide, index) => {
-                slide.classList.remove('active', 'slide-out');
-                if (dots[index]) dots[index].classList.remove('active');
-            });
+        function showSlide(index) {
+            // Clear interval to reset timer on manual interaction
+            clearInterval(slideInterval);
             
-            slides[currentSlide].classList.add('slide-out');
+            // Loop back to start if index is out of bounds
+            if (index >= slides.length) {
+                index = 0;
+            } else if (index < 0) {
+                index = slides.length - 1;
+            }
 
-            currentSlide = (n + slides.length) % slides.length;
+            // Update slide visibility
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
 
-            slides[currentSlide].classList.add('active');
-            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+            // Update dot visibility
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            if (dots.length > 0) {
+                dots[index].classList.add('active');
+            }
+
+            currentSlide = index;
+
+            // Restart interval
+            startCarousel();
         }
 
         function nextSlide() {
             showSlide(currentSlide + 1);
         }
 
-        function resetInterval() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 8000); // 8 seconds
+        function startCarousel() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
         }
 
-        // Initial setup
-        slides[0].classList.add('active');
-        if (dots[0]) dots[0].classList.add('active');
-        resetInterval();
+        // Initialize and start
+        if (slides.length > 1) {
+            startCarousel();
+        }
     }
 
-    // --- 3. On-Scroll Fade-In Animation ---
+    // --- 3. Scroll-Based Animations (Intersection Observer) ---
     function setupScrollAnimations() {
-        const animatedElements = document.querySelectorAll('.fade-in');
-        if (animatedElements.length === 0) return;
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
 
-        const observer = new IntersectionObserver(entries => {
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }, observerOptions);
 
-        animatedElements.forEach(element => {
-            observer.observe(element);
-        });
+        // Target elements for fade-in
+        const fadeElements = document.querySelectorAll('.fade-in, .stat-item, .programme-card, .project-card, .executives-section, .contact-cta');
+
+        fadeElements.forEach(el => observer.observe(el));
     }
 
-    // --- 4. Mobile Navigation ---
+    // --- 4. Mobile Navigation Logic ---
     function setupMobileNav() {
         const menuToggle = document.querySelector('.menu-toggle');
         const mobileNav = document.querySelector('.mobile-nav');
-        const closeBtn = document.querySelector('.close-btn');
-        const dropdown = mobileNav.querySelector('.dropdown');
-
-        if (!menuToggle || !mobileNav || !closeBtn || !dropdown) return;
-
-        const navPanel = mobileNav.querySelector('.mobile-nav-panel');
-        const focusableElements = navPanel.querySelectorAll('a[href], button');
+        const closeBtn = document.querySelector('.mobile-nav-panel .close-btn');
+        const navPanel = document.querySelector('.mobile-nav-panel');
+        const focusableElements = navPanel.querySelectorAll('a[href], button:not([disabled])');
         const firstFocusable = focusableElements[0];
         const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        if (!menuToggle || !mobileNav || !closeBtn) return;
 
         const openNav = () => {
             mobileNav.classList.add('is-open');
@@ -134,12 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target === mobileNav) closeNav();
         });
 
-        // Accordion for mobile dropdown
-        dropdown.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdown.classList.toggle('open');
-        });
-
+        // Accordion for mobile dropdown (desktop nav dropdown is only for "About" which is handled in the HTML as a simple list for mobile)
+        const dropdown = document.querySelector('.mobile-nav-links .dropdown > a');
+        if (dropdown) {
+            dropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.parentElement.classList.toggle('open');
+            });
+        }
+        
         // Trap focus inside the mobile nav
         navPanel.addEventListener('keydown', (e) => {
             if (e.key !== 'Tab') return;
@@ -160,8 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Initialization ---
     setupHeroSlideshow();
-    createCarousel('.staff-carousel');
-    createCarousel('.executives-carousel');
+    createCarousel('.executives-carousel'); // Staff carousel call removed
     setupScrollAnimations();
     setupMobileNav();
 });
