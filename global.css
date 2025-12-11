@@ -7,8 +7,8 @@
 /* --- Global Variables --- */
 @layer base {
     :root {
-        --primary-color: #F26709;
-        --secondary-color: oklch(61.66% 0.19 145.88);
+        --primary-color: oklch(61.66% 0.19 145.88);
+        --secondary-color: #F26709;
         --light-background: oklch(98.05% 0.01 264.04);
         --text-gray: oklch(59.91% 0.02 264.04);
         --card-background: oklch(100% 0 0);
