@@ -1,0 +1,250 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-background); /* Lighter background for the entire page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the page takes at least full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent scroll on initial load due to dynamic content */
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    height: 70vh; /* Make it take a good portion of the viewport height */
+    min-height: 600px; /* Minimum height to prevent squashing */
+    background-color: var(--card-background); /* White background for the card */
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Crucial for rounded corners and illustration */
+}
+
+/* Left Section: Login Form */
+.login-form-section {
+    flex: 1; /* Takes equal space, will be adjusted */
+    padding: 40px 50px; /* Adjusted for image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes header to top, prompt to bottom */
+}
+
+.login-header {
+    margin-bottom: 30px; /* Space below header, above main content */
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo img {
+    width: 35px; /* Smaller logo for the login page header */
+}
+
+.app-logo h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.login-content {
+    flex-grow: 1; /* Allows content to push prompt to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center login content vertically */
+    padding-bottom: 30px; /* Space above signup prompt */
+}
+
+.login-content h1 {
+    font-size: 2.8rem; /* Adjusted from 3.8rem for login page */
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+.login-content .subtitle {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--dark-text);
+    background-color: var(--light-background); /* Lighter background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Highlight with primary color */
+    box-shadow: 0 0 0 3px rgba(242, 103, 9, 0.1); /* Soft shadow with primary color */
+}
+
+/* Visually hidden label for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: -10px; /* Pull it slightly up towards inputs */
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-gray);
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--dark-text);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: var(--dark-text); /* Darken on hover for contrast */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #0A993A; /* Slightly darker primary on hover */
+    transform: translateY(-2px);
+}
+
+.signup-prompt {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+.signup-prompt .signup-link {
+    color: #0A993A;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-prompt .signup-link:hover {
+    text-decoration: underline;
+    color: var(--dark-text);
+}
+
+
+/* Right Section: Illustration */
+.login-illustration-section {
+    flex: 1.2; /* Takes slightly more space than the form */
+    background-color: #f3fff3; /* Background color of the illustration side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.illustration-img {
+    max-width: 90%; /* Adjust size of the image within its container */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* --- Responsive Adjustments for Login Page --- */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        height: auto; /* Allow height to adjust */
+        min-height: unset;
+        width: 90%;
+        max-width: 500px; /* Constrain width of the single column */
+    }
+
+    .login-form-section {
+        padding: 40px 30px;
+    }
+
+    .login-illustration-section {
+        display: none; /* Hide illustration on smaller screens */
+        /* Or you can make it smaller: */
+        /* height: 200px;
+        flex: unset;
+        width: 100%;
+        padding: 20px; */
+    }
+
+    .login-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-form-section {
+        padding: 30px 20px;
+    }
+
+    .login-content h1 {
+        font-size: 2rem;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
