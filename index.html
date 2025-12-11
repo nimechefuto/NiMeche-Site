@@ -32,11 +32,11 @@
                             <li><a href="programmes.html">Programmes</a></li>
                         </ul>
                     </li>
-                    <li><a href="#staff">Staff</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Departmental Portal</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" aria-label="Open navigation menu">
+            <button class="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation menu">
                 <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -45,399 +45,277 @@
     </header>
 
     <main>
-        <section class="hero fade-in">
+        <section class="hero" id="home">
             <div class="hero-background">
-                <div class="hero-background-image" style="background-image: url('images/background images/school-hero.jpg');"></div>
-                <div class="hero-background-image" style="background-image: url('images/background images/carousel-1.jpg');"></div>
-                <div class="hero-background-image" style="background-image: url('images/background images/carousel-2.jpg');"></div>
+                <div class="hero-background-image active" style="background-image: url('images/background images/hero-image-1.jpg');"></div>
+                <div class="hero-background-image" style="background-image: url('images/background images/hero-image-2.jpg');"></div>
+                <div class="hero-background-image" style="background-image: url('images/background images/hero-image-3.jpg');"></div>
             </div>
-            <h1>Excellence in Mechanical Engineering</h1>
-            <p>Federal University of Technology, Owerri</p>
-            <div class="hero-buttons">
-                <a href="login.html" class="btn btn-primary">Departmental Portal</a>
-                <a href="programmes.html" class="btn btn-secondary">View Programmes</a>
+            <div class="container hero-content">
+                <h1>Leading Mechanical Engineering in Africa</h1>
+                <p>Committed to advancing the frontiers of knowledge through transformative research, innovation, and academic excellence.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Discover More</a>
+                    <a href="programmes.html" class="btn btn-secondary">Our Programmes</a>
+                </div>
             </div>
         </section>
 
-        <div class="container">
-            <section class="stats fade-in">
+        <section class="stats section-padding">
+            <div class="container">
                 <div class="stats-row">
                     <div class="stat-item">
-                        <h2>50+</h2>
-                        <p>Years of<br>Excellence</p>
+                        <h3 class="stat-number">2000+</h3>
+                        <p class="stat-text">Alumni</p>
                     </div>
                     <div class="stat-item">
-                        <h2>20+</h2>
-                        <p>Industry<br>Partners</p>
-                    </div>
-                </div>
-                <div class="stats-row stats-row-bottom">
-                    <div class="stat-item">
-                        <h2>100+</h2>
-                        <p>Research<br>Publications</p>
+                        <h3 class="stat-number">25</h3>
+                        <p class="stat-text">Years of Excellence</p>
                     </div>
                     <div class="stat-item">
-                        <h2>3000+</h2>
-                        <p>Graduates<br>Produced</p>
+                        <h3 class="stat-number">100+</h3>
+                        <p class="stat-text">Publications</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <section id="about" class="about fade-in">
-            <div class="container">
-                <div class="about-content">
-                   
-                    <span class="badge">About</span>
-                    <h2>About The Department</h2>
-                    <p class="about-subtext">The Department of Mechanical Engineering at the Federal University of Technology, Owerri, is a center of excellence for learning, research, and innovation in the field of mechanical engineering.</p>
-                    <a href="#" class="btn btn-learn-more">Learn More</a>
-
+                    <div class="stat-item">
+                        <h3 class="stat-number">5</h3>
+                        <p class="stat-text">Research Groups</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mission-vision fade-in">
-            <div class="container">
-                <div class="miv-grid">
-                    <div class="miv-card">
-                        <div class="miv-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-1.036.84-1.875 1.875-1.875h13.5c1.036 0 1.875.84 1.875 1.875v13.5c0 1.036-.84 1.875-1.875 1.875h-13.5c-1.036 0-1.875-.84-1.875-1.875v-13.5ZM9 12h6m-3-3v6M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                              </svg>
+        <div class="welcome-section section-padding" id="about">
+            <div class="container welcome-grid">
+                <div class="welcome-text-content">
+                    <h2 class="section-title">Welcome to FUTO Mechanical Engineering</h2>
+                    <p class="section-subtitle">A center of excellence in Africa, recognized for its transformative research and academic excellence.</p>
+                    <div class="mission-vision-cards">
+                        <div class="miv-card">
+                            <h3>Our Mission</h3>
+                            <p>To produce highly skilled mechanical engineers, driven by innovation, and committed to sustainable development.</p>
                         </div>
-                        <h3>Mission</h3>
-                        <p>To produce world-class mechanical engineers who are well-grounded in theory and practice, and are capable of solving complex engineering problems.</p>
-                    </div>
-                    
-                    <div class="miv-card miv-card-highlight">
-                        <div class="miv-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-1.036.84-1.875 1.875-1.875h13.5c1.036 0 1.875.84 1.875 1.875v13.5c0 1.036-.84 1.875-1.875 1.875h-13.5c-1.036 0-1.875-.84-1.875-1.875v-13.5ZM9 12h6m-3-3v6M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                              </svg>
+                        <div class="miv-card">
+                            <h3>Our Vision</h3>
+                            <p>To be a leading mechanical engineering department globally, setting the pace for technological advancement in Africa.</p>
                         </div>
-                        <h3>Vision</h3>
-                        <p>To be a leading department of mechanical engineering in Africa, recognized for its transformative research and academic excellence.</p>
                     </div>
+                    <a href="programmes.html" class="btn btn-primary">View Programmes</a>
+                </div>
+                <div class="welcome-image-content">
+                    <div class="image-overlay-text">FUTO</div>
+                    <div class="miv-card-highlight">
+                        <h3>Our Goal</h3>
+                        <p>To cultivate an environment that fosters critical thinking and practical skills development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="miv-card">
-                        <div class="miv-icon">
+        <section class="programmes-preview section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Our Core Programmes</h2>
+                <p class="section-subtitle text-center">We offer a range of specialized programmes designed to meet the demands of modern industry.</p>
+                <div class="programmes-grid">
+                    <div class="programme-card">
+                        <div class="card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-1.036.84-1.875 1.875-1.875h13.5c1.036 0 1.875.84 1.875 1.875v13.5c0 1.036-.84 1.875-1.875 1.875h-13.5c-1.036 0-1.875-.84-1.875-1.875v-13.5ZM9 12h6m-3-3v6M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                              </svg>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.006a3 3 0 01-5.996.386 3 3 0 005.996-.386zm10.004.386a3 3 0 005.996-.386 3 3 0 01-5.996.386zm-11.776-.79a1.5 1.5 0 01-.663-1.043 32.22 32.22 0 01.373-3.66 1.045 1.045 0 01.125-.436l.724-.954 1.834-2.433a1.5 1.5 0 011.666-.089 1.5 1.5 0 01.716.892l.849 2.067a32.22 32.22 0 01.373 3.66 1.5 1.5 0 01-.663 1.043 33.725 33.725 0 01-5.263 0z" />
+                            </svg>
                         </div>
-                        <h3>Our Values</h3>
-                        <p>Excellence, Integrity, Innovation, and Teamwork are the core values that guide our department in all its activities.</p>
+                        <h3>B.Eng in Mechanical Engineering</h3>
+                        <p>Our flagship undergraduate program, providing a robust foundation in core mechanical principles and design.</p>
                     </div>
+                    <div class="programme-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5M12 18A7.5 7.5 0 004.5 9h-3m18 9h-3.375A7.5 7.5 0 0012 9v-3m0-3h.008v.008H12z" />
+                            </svg>
+                        </div>
+                        <h3>Postgraduate Studies (M.Eng / Ph.D.)</h3>
+                        <p>Advanced research and specialization opportunities in areas like thermodynamics, fluid mechanics, and material science.</p>
+                    </div>
+                    <div class="programme-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.002h.008v.008H12V6.002zM12 18.002h.008v.008H12V18.002zM12 12.002h.008v.008H12V12.002z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+                            </svg>
+                        </div>
+                        <h3>Executive & Professional Courses</h3>
+                        <p>Short courses and certifications for industry professionals seeking to upskill in areas like CAD/CAM and project management.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="programmes.html" class="btn btn-secondary">Explore All Programmes</a>
                 </div>
             </div>
         </section>
-        <section class="hod-welcome fade-in">
-          <div class="container welcome-grid">
-              <div class="welcome-image-content">
-                  <img src="https://i.imgur.com/example-chair-cactus.png" alt="Modern green armchair with a tall cactus plant.">
-                  <div class="image-overlay-text">HOD</div>
-              </div>
-              <div class="welcome-text-content">
-                  <span class="badge">Welcome</span> <h2>From the Head of Department</h2>
-                  <p>It is with great pleasure that I welcome you to the Department of Mechanical Engineering, Federal University of Technology, Owerri. Our department is committed to providing students with a rich and rewarding educational experience.</p>
-                  <p>We have a team of highly qualified and experienced staff members who are dedicated to impacting knowledge and skills to our students. We are also proud of our alumni who are making significant contributions to the development of society.</p>
-                  <a href="#" class="btn btn-outline">Meet the HOD</a>
-              </div>
-          </div>
-      </section>
 
-    
-
-        <section id="staff" class="staff-section fade-in">
-          <div class="container">
-              <span class="badge">Our Staff</span>
-              <h2>Meet Our Esteemed Staff</h2>
-              <p class="staff-subtext">Our staff members are a blend of experienced professors and young, vibrant lecturers, all dedicated to academic excellence.</p>
-
-              <div class="staff-carousel-wrapper">
-                  <div class="staff-carousel">
-                      
-                      <div class="staff-slide active">
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg" alt="Prof. A. B. Chukwu">
-                              </div>
-                              <h3>Prof. A. B. Chukwu</h3>
-                              <p>Thermodynamics</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card highlight">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Dr. C. D. Eze">
-                              </div>
-                              <h3>Dr. C. D. Eze</h3>
-                              <p>Fluid Mechanics</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5327653/pexels-photo-5327653.jpeg" alt="Engr. Dr. E. F. Okoro">
-                              </div>
-                              <h3>Engr. Dr. E. F. Okoro</h3>
-                              <p>Materials Science</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="staff-slide">
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg" alt="Dr. Emily Chen">
-                              </div>
-                              <h3>Dr. Emily Chen</h3>
-                              <p>Dermatologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card highlight">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg" alt="Dr. Michael Brown">
-                              </div>
-                              <h3>Dr. Michael Brown</h3>
-                              <p>Neurologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5214996/pexels-photo-5214996.jpeg" alt="Dr. Jessica White">
-                              </div>
-                              <h3>Dr. Jessica White</h3>
-                              <p>Oncologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="staff-slide">
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5794038/pexels-photo-5794038.jpeg" alt="Dr. David Harris">
-                              </div>
-                              <h3>Dr. David Harris</h3>
-                              <p>Urologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card highlight">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5206935/pexels-photo-5206935.jpeg" alt="Dr. Laura Martinez">
-                              </div>
-                              <h3>Dr. Laura Martinez</h3>
-                              <p>Gynecologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper" src="https://images.pexels.com/photos/5793952/pexels-photo-5793952.jpeg" alt="Dr. Chris Evans">
-                              </div>
-                              <h3>Dr. Chris Evans</h3>
-                              <p>Radiologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                      </div>
-                      
-                      <div class="staff-slide">
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/6663663/pexels-photo-6663663.jpeg" alt="Dr. Olivia Scott">
-                              </div>
-                              <h3>Dr. Olivia Scott</h3>
-                              <p>Endocrinologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card highlight">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg" alt="Dr. Ryan Garcia">
-                              </div>
-                              <h3>Dr. Ryan Garcia</h3>
-                              <p>Pulmonologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/7108110/pexels-photo-7108110.jpeg" alt="Dr. Megan King">
-                              </div>
-                              <h3>Dr. Megan King</h3>
-                              <p>Psychiatrist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="staff-slide">
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/5452268/pexels-photo-5452268.jpeg" alt="Dr. Alex Johnson">
-                              </div>
-                              <h3>Dr. Alex Johnson</h3>
-                              <p>General Surgeon</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card highlight">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg" alt="Dr. Sophia Rodriguez">
-                              </div>
-                              <h3>Dr. Sophia Rodriguez</h3>
-                              <p>Rheumatologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                          <div class="staff-card">
-                              <div class="staff-img-wrapper">
-                                  <img src="https://images.pexels.com/photos/7659567/pexels-photo-7659567.jpeg" alt="Dr. William Baker">
-                              </div>
-                              <h3>Dr. William Baker</h3>
-                              <p>Gastroenterologist</p>
-                              <div class="staff-socials">
-                                  <a href="#">F</a> <a href="#">X</a> <a href="#">I</a> <a href="#">L</a>
-                              </div>
-                          </div>
-                      </div>
-
-                  </div>
-                  <div class="carousel-dots"></div>
-              </div>
-          </div>
-      </section>
-      <section class="executive-welcome fade-in">
-        <div class="container welcome-grid">
-            <div class="welcome-image-content">
-                <img src="https://i.imgur.com/example-chair- cactus.png" alt="Modern green armchair with a tall cactus plant.">
-                <div class="image-overlay-text">EXEC</div>
-            </div>
-            <div class="welcome-text-content">
-                <span class="badge">Welcome</span>
-                <h2>From the Executives</h2>
-                <p>It is with great pleasure that we welcome you to the Department of Mechanical Engineering, Federal University of Technology, Owerri. Our department is committed to providing students with a rich and rewarding educational experience.</p>
-                <p>We have a team of highly qualified and experienced staff members who are dedicated to impacting knowledge and skills to our students. We are also proud of our alumni who are making significant contributions to the development of society.</p>
-                <a href="#" class="btn btn-outline">Meet the Executives</a>
-            </div>
-        </div>
-    </section>
-    <section class="executives-section fade-in">
-        <div class="container">
-            <span class="badge">Our Executives</span>
-            <h2>Meet The Transformation Executives</h2>
-            <p class="executives-subtext">Our executives are dedicated to moving the department forward.</p>
-
-            <div class="executives-carousel-wrapper">
-                <div class="executives-carousel">
-                    
-                    <div class="executives-slide active">
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg" alt="Executive 1">
-                            </div>
-                            <h3>Executive 1</h3>
-                            <p>President</p>
-                        </div>
-                        <div class="executives-card highlight">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Executive 2">
-                            </div>
-                            <h3>Executive 2</h3>
-                            <p>Vice President</p>
-                        </div>
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5327653/pexels-photo-5327653.jpeg" alt="Executive 3">
-                            </div>
-                            <h3>Executive 3</h3>
-                            <p>Secretary</p>
+        <section class="projects-preview section-padding" id="projects-preview">
+            <div class="container">
+                <h2 class="section-title text-center">Cutting-Edge Projects</h2>
+                <p class="section-subtitle text-center">See the innovative solutions our students and faculty are developing to solve real-world problems.</p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/project-images/project-1.jpg" alt="A student working on a machine">
+                        <div class="project-info">
+                            <h3>Design of a Solar-Powered Dryer</h3>
+                            <p>An innovative solution for post-harvest loss reduction in local communities.</p>
                         </div>
                     </div>
-
-                    <div class="executives-slide">
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg" alt="Executive 4">
-                            </div>
-                            <h3>Executive 4</h3>
-                            <p>Treasurer</p>
-                        </div>
-                        <div class="executives-card highlight">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg" alt="Executive 5">
-                            </div>
-                            <h3>Executive 5</h3>
-                            <p>Financial Secretary</p>
-                        </div>
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5214996/pexels-photo-5214996.jpeg" alt="Executive 6">
-                            </div>
-                            <h3>Executive 6</h3>
-                            <p>PRO</p>
+                    <div class="project-card">
+                        <img src="images/project-images/project-2.jpg" alt="A 3D printed model">
+                        <div class="project-info">
+                            <h3>Advanced Robotics for Industrial Automation</h3>
+                            <p>Developing low-cost, high-efficiency robotic arms for local manufacturing firms.</p>
                         </div>
                     </div>
-
-                    <div class="executives-slide">
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5794038/pexels-photo-5794038.jpeg" alt="Executive 7">
-                            </div>
-                            <h3>Executive 7</h3>
-                            <p>Director of Socials</p>
-                        </div>
-                        <div class="executives-card highlight">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/5206935/pexels-photo-5206935.jpeg" alt="Executive 8">
-                            </div>
-                            <h3>Executive 8</h3>
-                            <p>Director of Sports</p>
-                        </div>
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper" src="https://images.pexels.com/photos/5793952/pexels-photo-5793952.jpeg" alt="Executive 9">
-                            </div>
-                            <h3>Executive 9</h3>
-                            <p>Welfare Officer</p>
+                    <div class="project-card">
+                        <img src="images/project-images/project-3.jpg" alt="Engine block">
+                        <div class="project-info">
+                            <h3>Engine Performance Optimization</h3>
+                            <p>Research into biofuel blends for improved efficiency and reduced emissions in internal combustion engines.</p>
                         </div>
                     </div>
-                    
-                    <div class="executives-slide">
-                        <div class="executives-card">
-                            <div class="executives-img-wrapper">
-                                <img src="https://images.pexels.com/photos/6663663/pexels-photo-6663663.jpeg" alt="Executive 10">
-                            </div>
-                            <h3>Executive 10</h3>
-                            <p>Provost</p>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="carousel-dots"></div>
+                <div class="text-center mt-5">
+                    <a href="projects.html" class="btn btn-primary">View All Projects</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="executives-section section-padding">
+            <div class="container">
+                <h2 class="section-title">The NiMechE FUTO Executives</h2>
+                <p class="section-subtitle">Meet the current executive members leading the students' body for the academic year.</p>
+            
+                <div class="carousel-container executives-carousel-container">
+                    <div class="executives-carousel">
+                        <div class="executives-slide active" data-slide="1">
+                            <div class="executives-card">
+                                <img src="images/executives/ex-1.jpg" alt="Executive 1">
+                                <h3>Justin Brown</h3>
+                                <p>President</p>
+                                <div class="staff-socials">
+                                    <a href="#">F</a>
+                                    <a href="#">T</a>
+                                    <a href="#">L</a>
+                                </div>
+                            </div>
+                            <div class="executives-card">
+                                <img src="images/executives/ex-2.jpg" alt="Executive 2">
+                                <h3>Sarah Conner</h3>
+                                <p>Vice President</p>
+                                <div class="staff-socials">
+                                    <a href="#">F</a>
+                                    <a href="#">T</a>
+                                    <a href="#">L</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="executives-slide" data-slide="2">
+                            <div class="executives-card">
+                                <img src="images/executives/ex-3.jpg" alt="Executive 3">
+                                <h3>David Lee</h3>
+                                <p>General Secretary</p>
+                                <div class="staff-socials">
+                                    <a href="#">F</a>
+                                    <a href="#">T</a>
+                                    <a href="#">L</a>
+                                </div>
+                            </div>
+                            <div class="executives-card">
+                                <img src="images/executives/ex-4.jpg" alt="Executive 4">
+                                <h3>Emily Watson</h3>
+                                <p>Treasurer</p>
+                                <div class="staff-socials">
+                                    <a href="#">F</a>
+                                    <a href="#">T</a>
+                                    <a href="#">L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta section-padding">
+            <div class="container text-center">
+                <h2>Ready to shape the future?</h2>
+                <p>Join our world-class department and begin your journey in Mechanical Engineering.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </section>
     </main>
+
+    <footer class="fade-in">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-column footer-branding">
+                    <div class="logo">
+                        <img src="images/icons/Adobe Express - file (7).png" alt="NiMechE-FUTO Logo">
+                        <h4>NiMechE-<strong>FUTO</strong></h4>
+                    </div>
+                    <p>FUTO Mechanical Engineering is committed to excellence in education, research, and innovation for global impact.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">F</a>
+                        <a href="#" aria-label="Twitter">T</a>
+                        <a href="#" aria-label="LinkedIn">L</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="programmes.html">Programmes</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="login.html">Student Portal</a></li>
+                            <li><a href="#">E-Library</a></li>
+                            <li><a href="#about">Mission & Vision</a></li>
+                            <li><a href="#">Alumni Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>University</h4>
+                        <ul>
+                            <li><a href="https://futo.edu.ng/history">About FUTO</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 NiMechE FUTO. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <div class="mobile-nav" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
         <div class="mobile-nav-panel">
             <div class="mobile-nav-header">
@@ -453,7 +331,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#staff">Staff</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="programmes.html">Programmes</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -462,58 +339,6 @@
             </div>
         </div>
     </div>
-
-    <footer class="site-footer fade-in">
-      <div class="container footer-container">
-          <div class="footer-content">
-              <div class="footer-brand">
-                  <div class="footer-logo">NiMechE-<strong>FUTO</strong></div>
-                  <p>Committed to developing outstanding engineers through comprehensive education and world-class research.</p>
-                  <div class="footer-socials">
-                      <a href="#">F</a> <a href="#">I</a> <a href="#">L</a> </div>
-              </div>
-  
-              <div class="footer-links">
-                  <div class="footer-column">
-                      <h4>Department</h4>
-                      <ul>
-                          <li><a href="programmes.html">Programmes</a></li>
-                          <li><a href="https://resources.futo.edu.ng/futo-admission-list-2025-2026/">Admissions</a></li>
-                          <li><a href="#">Achievements</a></li>
-                          <li><a href="#staff">Staff</a></li>
-                      </ul>
-                  </div>
-                  <div class="footer-column">
-                      <h4>Resources</h4>
-                      <ul>
-                          <li><a href="login.html">Student Portal</a></li>
-                          <li><a href="#">E-Library</a></li>
-                          <li><a href="#about">Mission & Vision</a></li>
-                          <li><a href="#">Alumni Stories</a></li>
-                      </ul>
-                  </div>
-                  <div class="footer-column">
-                      <h4>University</h4>
-                      <ul>
-                          <li><a href="https://futo.edu.ng/history">About FUTO</a></li>
-                          <li><a href="contact.html">Contact Us</a></li>
-                          <li><a href="#">Careers</a></li>
-                          <li><a href="#">Partnerships</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="footer-bottom">
-              <p class="footer-copyright">© 2024 NiMechE FUTO. All rights reserved.</p>
-              <div class="footer-legal">
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Terms of Service</a>
-                  <a href="#">Cookies Settings</a>
-              </div>
-          </div>
-      </div>
-  </footer>
   
 <script src="main.js"></script>
 </body>
